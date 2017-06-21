@@ -3,6 +3,7 @@ public class node {
 	private int childNum;
 	private int value;
 	private int key;
+        private int Pkey;
 	
 	public node(int num){
 		value = num;
@@ -26,5 +27,11 @@ public class node {
 	public void setKey(int key) {
 		this.key = key;
 	}
-
+        
+        public void getPkey(int Pkey) {
+                return Pkey;
+        }
+        public void setPkey(int Pkey) {
+                this.Pkey= Pkey;
+        }
 }
