@@ -28,7 +28,7 @@ public class node {
 		this.key = key;
 	}
         
-        public void getPkey(int Pkey) {
+        public int getPkey() {
                 return Pkey;
         }
         public void setPkey(int Pkey) {
