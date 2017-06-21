@@ -5,7 +5,7 @@ public class treeDriver {
 	static Scanner kb = new Scanner(System.in);
 	static ArrayList<node> tree = new ArrayList<>();
 	
-	public int insert(int value, int key){
+	public static int insert(int value, int key){
 		int index = 0;
 		if(tree.size()==0){
 			tree.add(new node(value));
@@ -23,12 +23,12 @@ public class treeDriver {
 		tree.get(index).setChild(tree.get(index).getChild()+1);
 		tree.add(index+1, new node(value));
 		tree.get(index+1).setKey(key);
-                tree.get(index+1).setPKey(input);
+                tree.get(index+1).setPkey(input);
 		}   
 		return 0;
 	}
 	
-	public void delete(){
+	public static void delete(){
 		System.out.print("insert Key : ");
 		int input = kb.nextInt();
 		for(int i = 0; i<tree.size(); i++){
@@ -39,7 +39,7 @@ public class treeDriver {
                                 break;
 			}
                 for(int j = tree.size()-1; j>0 ; j--){
-                        if(tree.get(j).getkey()==tree.get(i).getPkey()){
+                        if(tree.get(j).getKey()==tree.get(i).getPkey()){
                                 tree.get(j).setChild(tree.get(j).getChild()-1);
                                 break;
                                 }
@@ -47,7 +47,7 @@ public class treeDriver {
 		}
 	}
 	
-	public void find(){
+	public static void find(){
 	int count=0;
 	System.out.print("find value : ");
 	int input = kb.nextInt();
@@ -65,7 +65,7 @@ public class treeDriver {
 			
 	}
 
-	public void travel(){
+	public static void travel(){
 		for(int i = 0 ; i< tree.size() ; i++)
 		System.out.println(tree.get(i).getValue() + " ");
 	}
